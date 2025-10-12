@@ -1,0 +1,317 @@
+% =============================================================================
+% THESIS BOOK STYLE FILE
+% =============================================================================
+% Diese Style-Datei enthält alle spezifischen Formatierungen für die
+% Masterarbeit entsprechend der Word-Vorlage
+% =============================================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{thesis-book}[2024/01/01 v1.0 Thesis Book Style]
+
+% =============================================================================
+% PACKAGE OPTIONS
+% =============================================================================
+
+\DeclareOption{german}{\def\thesis@language{german}}
+\DeclareOption{english}{\def\thesis@language{english}}
+\DeclareOption{debug}{\def\thesis@debug{true}}
+
+\ExecuteOptions{german}
+\ProcessOptions\relax
+
+% =============================================================================
+% REQUIRED PACKAGES
+% =============================================================================
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{mathptmx}
+\RequirePackage[scaled=0.9]{helvet}
+\RequirePackage{courier}
+\RequirePackage[
+    left=3.0cm,
+    right=3.0cm,
+    top=2.5cm,
+    bottom=3.0cm,
+    a4paper
+]{geometry}
+\RequirePackage{setspace}
+\RequirePackage{ragged2e}
+\RequirePackage{titlesec}
+\RequirePackage{sectsty}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{graphicx}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{enumitem}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{hyperref}
+
+% =============================================================================
+% FONT SETTINGS
+% =============================================================================
+
+% Hauptschrift: Times New Roman, 11pt
+\renewcommand{\normalsize}{\fontsize{11pt}{12pt}\selectfont}
+\renewcommand{\large}{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\Large}{\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\LARGE}{\fontsize{16pt}{18pt}\selectfont}
+
+% Zeilenabstand: Genau 12pt (entspricht 1,09 in LaTeX)
+\setstretch{1.09}
+
+% Textausrichtung: Blocksatz
+\justifying
+
+% =============================================================================
+% HEADING FORMATTING
+% =============================================================================
+
+% Überschriften Ebene 1 (Hauptüberschriften)
+\titleformat{\chapter}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries\MakeUppercase}
+    {\thechapter}
+    {20pt}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries\MakeUppercase}
+
+\titlespacing{\chapter}{0pt}{36pt}{6pt}
+
+% Überschriften Ebene 2
+\titleformat{\section}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries}
+    {\thesection}
+    {1em}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries}
+
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Überschriften Ebene 3
+\titleformat{\subsection}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries}
+    {\thesubsection}
+    {1em}
+    {\fontsize{11pt}{12pt}\selectfont\bfseries}
+
+\titlespacing{\subsection}{0pt}{12pt}{6pt}
+
+% =============================================================================
+% PARAGRAPH FORMATTING
+% =============================================================================
+
+% Absatzformatierung
+\setlength{\parindent}{0.4cm}  % Einzug für Folgeabsätze: 0,4 cm
+\setlength{\parskip}{0pt}      % Kein Abstand zwischen Absätzen
+
+% Erster Absatz nach Überschrift: Keine Einrückung
+\makeatletter
+\renewcommand{\@afterheading}{%
+    \@nobreaktrue
+    \everypar{%
+        \if@nobreak
+            \@nobreakfalse
+            \clubpenalty \@M
+            \setlength{\parindent}{0pt}%
+        \else
+            \setlength{\parindent}{0.4cm}%
+        \fi
+    }%
+}
+\makeatother
+
+% =============================================================================
+% LIST FORMATTING
+% =============================================================================
+
+% Aufzählungen
+\setlist[itemize]{
+    leftmargin=0.63cm,
+    label=\textbullet,
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=0pt
+}
+
+% =============================================================================
+% TABLE FORMATTING
+% =============================================================================
+
+% Tabellenformatierung
+\captionsetup[table]{
+    font=small,
+    labelfont=bf,
+    textfont=normalfont,
+    justification=justified,
+    singlelinecheck=false,
+    position=above,
+    skip=6pt
+}
+
+\renewcommand{\tablename}{Tab.}
+\renewcommand{\thetable}{\arabic{table}}
+
+% =============================================================================
+% FIGURE FORMATTING
+% =============================================================================
+
+% Abbildungsformatierung
+\captionsetup[figure]{
+    font=small,
+    labelfont=bf,
+    textfont=normalfont,
+    justification=justified,
+    singlelinecheck=false,
+    position=below,
+    skip=6pt
+}
+
+\renewcommand{\figurename}{Abb.}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+% =============================================================================
+% EQUATION FORMATTING
+% =============================================================================
+
+% Gleichungen
+\makeatletter
+\renewcommand{\@eqnnum}{%
+    \ifx\@empty\@eqnnum@prefix\else\@eqnnum@prefix\fi
+    \ifx\@empty\@eqnnum@suffix\else\@eqnnum@suffix\fi
+    \hfill\@eqnnum@number
+}
+\makeatother
+
+% =============================================================================
+% BIBLIOGRAPHY FORMATTING
+% =============================================================================
+
+% Literaturverzeichnis
+\renewcommand{\bibfont}{\fontsize{10pt}{11pt}\selectfont}
+\setlength{\bibhang}{0.4cm}  % Hängender Einzug: 0,4 cm ab zweiter Zeile
+
+% =============================================================================
+% CUSTOM ENVIRONMENTS
+% =============================================================================
+
+% Titelseiten-Formatierung
+\newcommand{\maketitlepage}{%
+    \thispagestyle{empty}%
+    \begin{center}%
+        \vspace*{2cm}%
+        % Titel: Times New Roman, 16pt, Zeilenabstand 18pt
+        {\fontsize{16pt}{18pt}\selectfont\bfseries\yourThesisTitle}%
+        \vspace{3cm}%
+        % Autoren: Times New Roman, 12pt, Zeilenabstand 14pt
+        {\fontsize{12pt}{14pt}\selectfont\yourNameInclTitle}%
+        \vspace{1cm}%
+        % Institution: Times New Roman, 10pt, Zeilenabstand 11pt
+        {\fontsize{10pt}{11pt}\selectfont\universityCityCountry}%
+        \vspace{2cm}%
+        % Zusätzliche Informationen
+        {\fontsize{10pt}{11pt}\selectfont%
+        \typeOfWork\\%
+        \studyProgram\\%
+        \thesisDate%
+        }%
+    \end{center}%
+}
+
+% Kurzfassung-Formatierung
+\renewenvironment{abstract}{%
+    \chapter*{Kurzfassung}%
+    \addcontentsline{toc}{chapter}{Kurzfassung}%
+    \noindent\textbf{KURZFASSUNG: }%
+    \ignorespaces%
+}{%
+    \par\medskip%
+}
+
+% Spezielle Formatierung für erste Absätze nach Überschriften
+\makeatletter
+\newcommand{\firstparagraph}[1]{%
+    \setlength{\parindent}{0pt}%
+    #1%
+    \setlength{\parindent}{0.4cm}%
+}
+\makeatother
+
+% Tabellen-Formatierung nach Word-Vorlage
+\newenvironment{thesistable}[3]{%
+    \begin{table}[htbp]%
+    \centering%
+    \caption{#1}%
+    \label{#2}%
+    \begin{tabular}{#3}%
+    \toprule%
+}{%
+    \bottomrule%
+    \end{tabular}%
+    \end{table}%
+}
+
+% Abbildungs-Formatierung nach Word-Vorlage
+\newenvironment{thesisfigure}[2]{%
+    \begin{figure}[htbp]%
+    \centering%
+    \includegraphics[width=\textwidth]{#1}%
+    \caption{#2}%
+    \label{fig:#1}%
+}{%
+    \end{figure}%
+}
+
+% Gleichungs-Formatierung nach Word-Vorlage
+\newenvironment{thesisequation}[1]{%
+    \begin{equation}%
+    \setlength{\abovedisplayskip}{12pt}%
+    \setlength{\belowdisplayskip}{12pt}%
+    \setlength{\abovedisplayshortskip}{12pt}%
+    \setlength{\belowdisplayshortskip}{12pt}%
+    \begin{split}%
+}{%
+    \end{split}%
+    \label{eq:#1}%
+    \end{equation}%
+}
+
+% Literaturverweis-Formatierung
+\newcommand{\citeref}[1]{(\citeauthor{#1} \citeyear{#1})}
+
+% Aufzählungs-Formatierung nach Word-Vorlage
+\newenvironment{thesisitemize}{%
+    \begin{itemize}[leftmargin=0.63cm, label=\textbullet]%
+}{%
+    \end{itemize}%
+}
+
+% =============================================================================
+% VALIDATION
+% =============================================================================
+
+% Überprüfung der Formatierungen
+\makeatletter
+\@ifpackageloaded{geometry}{%
+    \typeout{Seitenränder korrekt geladen: 3cm links/rechts, 2.5cm oben, 3cm unten}%
+}{%
+    \typeout{WARNUNG: geometry-Package nicht geladen!}%
+}
+
+\@ifpackageloaded{mathptmx}{%
+    \typeout{Schriftart korrekt geladen: Times New Roman}%
+}{%
+    \typeout{WARNUNG: mathptmx-Package nicht geladen!}%
+}
+
+\@ifpackageloaded{setspace}{%
+    \typeout{Zeilenabstand korrekt geladen: 1.09 (entspricht 12pt)}%
+}{%
+    \typeout{WARNUNG: setspace-Package nicht geladen!}%
+}
+\makeatother
+
+% =============================================================================
+% END OF PACKAGE
+% =============================================================================
+
+\endinput

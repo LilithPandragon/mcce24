@@ -1,5 +1,110 @@
+% =============================================================================
+% DEUTSCHE SPRACHEINSTELLUNGEN FÜR THESIS BOOK
+% =============================================================================
+% Diese Datei enthält alle deutschen Sprachbefehle und Labels
+% =============================================================================
+
+% =============================================================================
+% SPRACHBEFEHLE
+% =============================================================================
+
+% Grundlegende Labels
 \newcommand{\toObtainLabel}{zur Erlangung des akademischen Grades}
 \newcommand{\submittedByLabel}{Eingereicht von:}
 \newcommand{\matNumberLabel}{Personenkennzeichen:}
 \newcommand{\dateLabel}{Datum:}
 \newcommand{\advisorLabel}{Betreut von:}
+\newcommand{\literatureLabel}{Literaturverzeichnis}
+\newcommand{\abstractLabel}{Kurzfassung}
+\newcommand{\contentsLabel}{Inhaltsverzeichnis}
+\newcommand{\listoffiguresLabel}{Abbildungsverzeichnis}
+\newcommand{\listoftablesLabel}{Tabellenverzeichnis}
+
+% Kapitel-Labels
+\newcommand{\introductionLabel}{Einleitung und Problemhintergrund}
+\newcommand{\relatedWorkLabel}{Stand des Wissens / Stand der Technik}
+\newcommand{\researchQuestionLabel}{Wissenschaftliche Fragestellung}
+\newcommand{\methodologyLabel}{Forschungsmethodik}
+\newcommand{\resultsLabel}{Ergebnisse}
+\newcommand{\conclusionLabel}{Schlussfolgerungen und Ausblick}
+
+% Formatierungs-Labels
+\newcommand{\figureLabel}{Abb.}
+\newcommand{\tableLabel}{Tab.}
+\newcommand{\equationLabel}{Gl.}
+\newcommand{\pageLabel}{Seite}
+\newcommand{\chapterLabel}{Kapitel}
+\newcommand{\sectionLabel}{Abschnitt}
+
+% =============================================================================
+% DEUTSCHE ZITIERSTILE
+% =============================================================================
+
+% Deutsche Anführungszeichen
+\newcommand{\germanquote}[1]{„#1"}
+
+% Deutsche Datumsformatierung
+\newcommand{\germandate}[3]{#1. #2 #3}
+
+% Deutsche Zahlenformatierung
+\newcommand{\germannumber}[1]{\numprint{#1}}
+
+% Deutsche Literaturverweise
+\newcommand{\germanref}[1]{(\citeauthor{#1} \citeyear{#1})}
+\newcommand{\germanrefs}[2]{(\citeauthor{#1} \citeyear{#1}, \citeauthor{#2} \citeyear{#2})}
+
+% =============================================================================
+% DEUTSCHE FORMATIERUNGEN
+% =============================================================================
+
+% Deutsche Absatzformatierung
+\newcommand{\germanparagraph}{%
+    \setlength{\parindent}{0.4cm}%
+    \setlength{\parskip}{0pt}%
+}
+
+% Deutsche Aufzählungsformatierung
+\newcommand{\germanitemize}{%
+    \begin{itemize}[leftmargin=0.63cm, label=\textbullet]%
+}
+
+% Deutsche Tabellenformatierung
+\newcommand{\germantable}[3]{%
+    \begin{table}[htbp]%
+    \centering%
+    \caption{#1}%
+    \label{#2}%
+    \begin{tabular}{#3}%
+    \toprule%
+}
+
+% Deutsche Abbildungsformatierung
+\newcommand{\germanfigure}[2]{%
+    \begin{figure}[htbp]%
+    \centering%
+    \includegraphics[width=\textwidth]{#1}%
+    \caption{#2}%
+    \label{fig:#1}%
+}
+
+% =============================================================================
+% DEUTSCHE VALIDIERUNG
+% =============================================================================
+
+% Überprüfung der deutschen Spracheinstellungen
+\makeatletter
+\@ifpackageloaded{babel}{%
+    \typeout{Deutsche Spracheinstellungen korrekt geladen}%
+}{%
+    \typeout{WARNUNG: babel-Package nicht geladen!}%
+}
+\makeatother
+
+% Überprüfung der deutschen Rechtschreibung
+\makeatletter
+\@ifpackageloaded{biblatex}{%
+    \typeout{Deutsche Literaturverwaltung korrekt geladen}%
+}{%
+    \typeout{WARNUNG: biblatex-Package nicht geladen!}%
+}
+\makeatother

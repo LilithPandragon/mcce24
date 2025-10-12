@@ -1,5 +1,110 @@
+% =============================================================================
+% ENGLISH LANGUAGE SETTINGS FOR THESIS BOOK
+% =============================================================================
+% This file contains all English language commands and labels
+% =============================================================================
+
+% =============================================================================
+% LANGUAGE COMMANDS
+% =============================================================================
+
+% Basic labels
 \newcommand{\toObtainLabel}{for obtaining the academic degree}
 \newcommand{\submittedByLabel}{Submitted by:}
 \newcommand{\matNumberLabel}{Matriculation number:}
 \newcommand{\dateLabel}{Date:}
 \newcommand{\advisorLabel}{Supervised by:}
+\newcommand{\literatureLabel}{Bibliography}
+\newcommand{\abstractLabel}{Abstract}
+\newcommand{\contentsLabel}{Table of Contents}
+\newcommand{\listoffiguresLabel}{List of Figures}
+\newcommand{\listoftablesLabel}{List of Tables}
+
+% Chapter labels
+\newcommand{\introductionLabel}{Introduction and Problem Background}
+\newcommand{\relatedWorkLabel}{State of the Art / State of Technology}
+\newcommand{\researchQuestionLabel}{Scientific Research Question}
+\newcommand{\methodologyLabel}{Research Methodology}
+\newcommand{\resultsLabel}{Results}
+\newcommand{\conclusionLabel}{Conclusions and Future Work}
+
+% Formatting labels
+\newcommand{\figureLabel}{Fig.}
+\newcommand{\tableLabel}{Tab.}
+\newcommand{\equationLabel}{Eq.}
+\newcommand{\pageLabel}{Page}
+\newcommand{\chapterLabel}{Chapter}
+\newcommand{\sectionLabel}{Section}
+
+% =============================================================================
+% ENGLISH CITATION STYLES
+% =============================================================================
+
+% English quotation marks
+\newcommand{\englishquote}[1]{``#1''}
+
+% English date formatting
+\newcommand{\englishdate}[3]{#2 #1, #3}
+
+% English number formatting
+\newcommand{\englishnumber}[1]{\numprint{#1}}
+
+% English literature references
+\newcommand{\englishref}[1]{(\citeauthor{#1} \citeyear{#1})}
+\newcommand{\englishrefs}[2]{(\citeauthor{#1} \citeyear{#1}, \citeauthor{#2} \citeyear{#2})}
+
+% =============================================================================
+% ENGLISH FORMATTING
+% =============================================================================
+
+% English paragraph formatting
+\newcommand{\englishparagraph}{%
+    \setlength{\parindent}{0.4cm}%
+    \setlength{\parskip}{0pt}%
+}
+
+% English list formatting
+\newcommand{\englishitemize}{%
+    \begin{itemize}[leftmargin=0.63cm, label=\textbullet]%
+}
+
+% English table formatting
+\newcommand{\englishtable}[3]{%
+    \begin{table}[htbp]%
+    \centering%
+    \caption{#1}%
+    \label{#2}%
+    \begin{tabular}{#3}%
+    \toprule%
+}
+
+% English figure formatting
+\newcommand{\englishfigure}[2]{%
+    \begin{figure}[htbp]%
+    \centering%
+    \includegraphics[width=\textwidth]{#1}%
+    \caption{#2}%
+    \label{fig:#1}%
+}
+
+% =============================================================================
+% ENGLISH VALIDATION
+% =============================================================================
+
+% Check English language settings
+\makeatletter
+\@ifpackageloaded{babel}{%
+    \typeout{English language settings correctly loaded}%
+}{%
+    \typeout{WARNING: babel-Package not loaded!}%
+}
+\makeatother
+
+% Check English bibliography
+\makeatletter
+\@ifpackageloaded{biblatex}{%
+    \typeout{English bibliography management correctly loaded}%
+}{%
+    \typeout{WARNING: biblatex-Package not loaded!}%
+}
+\makeatother
