@@ -1,47 +1,9 @@
-# LaTeX-Vorlage für Masterarbeiten - Thesis Book
+# LaTeX-Vorlage - Thesis Book
 
 ## Übersicht
 
-Diese LaTeX-Vorlage wurde exakt an die Word-Vorlage für Masterarbeiten an der FH Burgenland angepasst. 
+Diese LaTeX-Vorlage wurde exakt an die Word-Vorlage für Masterarbeiten an der Hochschule Burgenland angepasst. 
 Alle Formatierungen entsprechen den Vorgaben der Word-Vorlage 12-10-2025.
-
-## Formatierungsvorgaben (nach Word-Vorlage)
-
-### Seitenlayout
-- **Format:** A4
-- **Seitenränder:**
-  - Oben: 2,5 cm
-  - Unten: 3,0 cm
-  - Links: 3,0 cm
-  - Rechts: 3,0 cm
-
-### Schriftarten und Größen
-- **Hauptschrift:** Times New Roman, 11 pt
-- **Zeilenabstand:** Genau 12 pt (entspricht etwa 1,09 in LaTeX)
-- **Textausrichtung:** Blocksatz
-
-### Titelseite
-- **Titel:** Times New Roman, 16 pt, Zeilenabstand 18 pt
-- **Autoren:** Times New Roman, 12 pt, Zeilenabstand 14 pt
-- **Institution:** Times New Roman, 10 pt, Zeilenabstand 11 pt
-
-### Überschriften
-- **Ebene 1:** Times New Roman, 11 pt, Großbuchstaben
-- **Abstand vor:** 36 pt, **Abstand nach:** 6 pt
-
-### Textformatierung
-- **Erster Absatz nach Überschrift:** Keine Einrückung (linksbündig)
-- **Folgeabsätze:** 0,4 cm Einzug
-- **Aufzählungen:** Punkt (•), Einzug 0,63 cm
-
-### Tabellen und Abbildungen
-- **Tabellentext:** Times New Roman, 10 pt, Zeilenabstand 11 pt
-- **Tabellenbeschriftung:** "Tab. X: Beschreibung", über der Tabelle
-- **Abbildungsbeschriftung:** "Abb. X: Beschreibung", unter der Abbildung
-
-### Literaturverweise
-- **Format:** (Nachname Jahr)
-- **Beispiele:** (Baumann 1994), (Baumann 1994, Steffen 1984)
 
 ## Verwendung der Vorlage
 
@@ -61,7 +23,7 @@ In der Datei `01_data/yourData.tex` müssen folgende Informationen angepasst wer
 \newcommand{\departmentName}{Department Informationstechnologie}
 \newcommand{\yourThesisTitle}{Beispieltitel der Masterarbeit}
 \newcommand{\thesisDate}{\ordinalnum{27} Juli 2024}
-\newcommand{\universityCityCountry}{FH-Burgenland, Eisenstadt, Österreich}
+\newcommand{\universityCityCountry}{Hochschule-Burgenland, Eisenstadt, Österreich}
 ```
 
 ### 3. Kapitel bearbeiten
@@ -118,34 +80,3 @@ latexmk -pdf -bibtex thesis-book.tex
 - Verwenden Sie die Umgebung `thesisitemize`
 - Einzug und Formatierung sind bereits korrekt eingestellt
 
-## Dateistruktur
-
-```
-Thesis-Book/
-├── thesis-book.tex              # Hauptdatei
-├── thesis-book.sty              # Style-Datei
-├── 00_preamble/                 # Preamble-Dateien
-│   ├── thesis-book.tex
-│   ├── german.tex
-│   └── english.tex
-├── 01_data/                     # Dokumentdaten
-│   └── yourData.tex
-├── thesis_book_chapters/        # Kapitel
-│   ├── 00_abstract_de.tex
-│   ├── 01_introduction.tex
-│   ├── 02_relatedWork.tex
-│   ├── 03_researchQuestion.tex
-│   ├── 04_methodologicalApproach.tex
-│   ├── 05_results.tex
-│   └── 06_conclusionAndFutureWork.tex
-├── references.bib               # Literaturverzeichnis
-└── README.md                    # Diese Datei
-```
-
-## Support
-
-Bei Fragen zur Verwendung der Vorlage wenden Sie sich an den Betreuer der Masterarbeit oder an die IT-Abteilung der FH Burgenland.
-
-## Version
-
-Version 1.0 - Angepasst an Word-Vorlage 2025

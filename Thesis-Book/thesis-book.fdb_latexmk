@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis-book"] 1760296499.61217 "thesis-book.bcf" "thesis-book.bbl" "thesis-book" 1760296848.2196 0
+["biber thesis-book"] 1760297995.00918 "thesis-book.bcf" "thesis-book.bbl" "thesis-book" 1760298000.01953 0
   "references.bib" 1760296041 2948 16bfd296f6b4685d2a3a00b9c9555f9c ""
-  "thesis-book.bcf" 1760296848 109019 f0ca41a620876c666b157d479f8759d5 "pdflatex"
+  "thesis-book.bcf" 1760297999 109019 f0ca41a620876c666b157d479f8759d5 "pdflatex"
   (generated)
   "thesis-book.bbl"
   "thesis-book.blg"
   (rewritten before read)
-["pdflatex"] 1760296847.11392 "c:/Users/susan/OneDrive/Dokumente/@@FH/@MCCE/3 Semester/mcce24/Thesis-Book/thesis-book.tex" "thesis-book.pdf" "thesis-book" 1760296848.22015 0
+["pdflatex"] 1760297998.89785 "c:/Users/susan/OneDrive/Dokumente/@@FH/@MCCE/3 Semester/mcce24/Thesis-Book/thesis-book.tex" "thesis-book.pdf" "thesis-book" 1760298000.02017 0
   "01_data/yourData.tex" 1760275323 712 e021c88c4e75abdddc9451f6b7cea4a9 ""
   "C:/Users/susan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760273680 253684 14ddd06ec184a605be15cec2c6f89b85 ""
   "C:/Users/susan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1741730729 12036089 fa7fb180502366432797b1f2819417ec ""
@@ -142,14 +142,14 @@
   "C:/Users/susan/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1730404152 7243 e5dac1240636811edb77568b81818372 ""
   "C:/Users/susan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/susan/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "acronyms.tex" 1760296197 642 e709042a966491e441194ec11dc4e766 ""
-  "c:/Users/susan/OneDrive/Dokumente/@@FH/@MCCE/3 Semester/mcce24/Thesis-Book/thesis-book.tex" 1760296438 7349 3bbd9a29d07a327e5d31c487349bb299 ""
-  "thesis-book.aux" 1760296848 5745 5fe51b88b0927dddf4ce962cf6454392 "pdflatex"
-  "thesis-book.bbl" 1760296505 3166 4b77f2b3683bbf9f8302bbe547a43ba4 "biber thesis-book"
-  "thesis-book.out" 1760296848 1399 28fad5ee71860cd1dc40e5ad7c626be9 "pdflatex"
-  "thesis-book.run.xml" 1760296848 2470 d67cbe4664db57354fe49bfc4d4fd2a8 "pdflatex"
-  "thesis-book.tex" 1760296438 7349 3bbd9a29d07a327e5d31c487349bb299 ""
-  "thesis-book.toc" 1760296848 611 09923b8c9ba9a19c0a635be516e1697c "pdflatex"
+  "acronyms.tex" 1760296858 642 e709042a966491e441194ec11dc4e766 ""
+  "c:/Users/susan/OneDrive/Dokumente/@@FH/@MCCE/3 Semester/mcce24/Thesis-Book/thesis-book.tex" 1760297998 7072 3bbd9a29d07a327e5d31c487349bb299 ""
+  "thesis-book.aux" 1760297999 5745 5fe51b88b0927dddf4ce962cf6454392 "pdflatex"
+  "thesis-book.bbl" 1760297996 3166 4b77f2b3683bbf9f8302bbe547a43ba4 "biber thesis-book"
+  "thesis-book.out" 1760297999 1399 28fad5ee71860cd1dc40e5ad7c626be9 "pdflatex"
+  "thesis-book.run.xml" 1760297999 2470 d67cbe4664db57354fe49bfc4d4fd2a8 "pdflatex"
+  "thesis-book.tex" 1760297998 7072 3bbd9a29d07a327e5d31c487349bb299 ""
+  "thesis-book.toc" 1760297999 611 09923b8c9ba9a19c0a635be516e1697c "pdflatex"
   "thesis_book_chapters/00_abstract_de.tex" 1760296595 1178 eeac33bc32de3476085c1a7dc9cf6ac4 ""
   "thesis_book_chapters/01_introduction.tex" 1760296637 1689 19de3586ba3cf5c7a9fc3616e1489d4f ""
   "thesis_book_chapters/02_relatedWork.tex" 1760296686 2379 c10eb5e396012b0e49b305fd76a5551b ""
