@@ -2,7 +2,7 @@
 % Masterarbeit LaTeX-Vorlage - Angepasst an Word-Vorlage
 % =============================================================================
 % Diese Vorlage entspricht exakt den Formatierungsvorgaben der Word-Vorlage
-% für Masterarbeiten an der FH Burgenland
+% für Masterarbeiten an der Hochschule Burgenland 2025-10-12
 % =============================================================================
 
 \documentclass[11pt,a4paper]{report}
@@ -51,6 +51,9 @@
 % Aufzählungen
 \usepackage{enumitem}
 
+% Akronyme
+\usepackage[printonlyused, nohyperlinks]{acronym}
+
 % Mathematik
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -80,7 +83,7 @@
 }
 
 % =============================================================================
-% FORMATIERUNGEN NACH WORD-VORLAGE
+% FORMATIERUNGEN NACH WORD-VORLAGE 2025-10-12
 % =============================================================================
 
 % Hauptschrift: Times New Roman, 11pt
@@ -262,9 +265,14 @@
 \input{thesis_book_chapters/06_conclusionAndFutureWork}
 
 % =============================================================================
-% LITERATURVERZEICHNIS
+% LITERATURVERZEICHNIS und Akronyme
 % =============================================================================
 
+\phantomsection
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \printbibliography[title=Literaturverzeichnis]
+
+% Akronyme
+\input{acronyms.tex}
 
 \end{document}

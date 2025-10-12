@@ -4,3 +4,5 @@
 \contentsline {chapter}{\numberline {4}Forschungsmethodik}{7}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{8}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Schlussfolgerungen und Ausblick}{9}{chapter.6}%
+\contentsline {chapter}{Literaturverzeichnis}{9}{section*.10}%
+\contentsline {chapter}{Akronyme}{10}{section*.12}%

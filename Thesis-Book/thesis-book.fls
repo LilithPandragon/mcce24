@@ -64,6 +64,13 @@ INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.sty
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\generic\xstring\xstring.tex
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
@@ -353,6 +360,9 @@ INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.t
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT .\acronyms.tex
+INPUT .\acronyms.tex
+INPUT acronyms.tex
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\susan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT thesis-book.aux
