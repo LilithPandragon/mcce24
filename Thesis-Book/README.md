@@ -38,7 +38,7 @@ Die Kapitel befinden sich im Ordner `thesis_book_chapters/`:
 - `06_conclusionAndFutureWork.tex` - Schlussfolgerungen und Ausblick
 
 ### 4. Literaturverzeichnis
-Die Literaturverweise werden in `references.bib` verwaltet. Die Formatierung erfolgt automatisch nach den Word-Vorgaben.
+Die Literaturverweise werden in `references.bib` verwaltet. Die Formatierung erfolgt automatisch.
 
 ## Kompilierung
 
@@ -67,16 +67,16 @@ latexmk -pdf -bibtex thesis-book.tex
 - Die Word-Vorlage ist die verbindliche Referenz
 
 ### Literaturverweise
-- Verwenden Sie `\citeref{key}` für Verweise im Text
+- Verwende `\citeref{key}` für Verweise im Text
 - Format: (Nachname Jahr)
 - Beispiel: `\citeref{mustermann2023}` → (Mustermann 2023)
 
 ### Tabellen und Abbildungen
-- Verwenden Sie die bereitgestellten Umgebungen `thesistable` und `thesisfigure`
+- Verwende die bereitgestellten Umgebungen `thesistable` und `thesisfigure`
 - Beschriftungen werden automatisch formatiert
 - Nummerierung beginnt bei 1
 
 ### Aufzählungen
-- Verwenden Sie die Umgebung `thesisitemize`
+- Verwende die Umgebung `thesisitemize`
 - Einzug und Formatierung sind bereits korrekt eingestellt
 
