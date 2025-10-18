@@ -1,3 +1,4 @@
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung und Problemhintergrund}{4}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Stand des Wissens / Stand der Technik}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Wissenschaftliche Fragestellung}{6}{chapter.3}%

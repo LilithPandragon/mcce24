@@ -15,6 +15,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+% Spracheinstellung
+\usepackage[english]{babel}
+
 % Schriftart: Times New Roman
 \usepackage{mathptmx}
 \usepackage[scaled=0.9]{helvet}
@@ -63,8 +66,8 @@
     style=authoryear-icomp,
     sorting=nty,
     backend=biber,
-    language=ngerman,
-    sortlocale=de-DE,
+    language=english,
+    sortlocale=en-US,
     natbib=true,
     maxbibnames=1000,
 ]{biblatex}
@@ -159,8 +162,7 @@
     skip=6pt
 }
 
-\renewcommand{\tablename}{Tab.}
-\renewcommand{\thetable}{\arabic{table}}
+% Tabellenformatierung wird in Preamble-Datei definiert
 
 % Abbildungsformatierung
 \captionsetup[figure]{
@@ -173,8 +175,7 @@
     skip=6pt
 }
 
-\renewcommand{\figurename}{Abb.}
-\renewcommand{\thefigure}{\arabic{figure}}
+% Abbildungsformatierung wird in Preamble-Datei definiert
 
 % Gleichungen
 \makeatletter
@@ -195,6 +196,9 @@
 
 % Diese Werte müssen in yourData.tex angepasst werden
 \input{01_data/yourData}
+
+% Spracheinstellungen laden
+\input{00_preamble/german}
 
 % =============================================================================
 % DOKUMENT BEGINN
@@ -269,8 +273,8 @@
 % =============================================================================
 
 \phantomsection
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\printbibliography[title=Literaturverzeichnis]
+\addcontentsline{toc}{chapter}{\literatureLabel}
+\printbibliography[title=\literatureLabel]
 
 % Akronyme
 \input{acronyms.tex}

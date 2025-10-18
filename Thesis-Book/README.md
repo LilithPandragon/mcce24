@@ -80,3 +80,44 @@ latexmk -pdf -bibtex thesis-book.tex
 - Verwende die Umgebung `thesisitemize`
 - Einzug und Formatierung sind bereits korrekt eingestellt
 
+## Sprachwechsel zwischen Deutsch und Englisch
+
+### Spracheinstellung ändern
+
+Die Vorlage unterstützt sowohl deutsche als auch englische Ausgabe. Um zwischen den Sprachen zu 
+wechseln, ändern Sie in der Hauptdatei `thesis-book.tex` die Zeile 201:
+
+#### Für Deutsch:
+```latex
+\input{00_preamble/german}
+```
+
+#### Für Englisch:
+```latex
+\input{00_preamble/english}
+```
+
+### Was wird automatisch übersetzt
+
+Bei der Sprachauswahl werden folgende Elemente automatisch angepasst:
+
+#### Kapitel-Überschriften:
+- **Deutsch:** "Einleitung und Problemhintergrund", "Stand des Wissens", etc.
+- **Englisch:** "Introduction and Problem Background", "State of the Art", etc.
+
+#### Tabellen und Abbildungen:
+- **Deutsch:** "Tab.", "Abb."
+- **Englisch:** "Tab.", "Fig."
+
+#### Literaturverzeichnis und Akronyme:
+- **Deutsch:** "Literaturverzeichnis", "Akronyme"
+- **Englisch:** "Bibliography", "Acronyms"
+
+### Technische Details
+
+Die Sprachlabels sind in den Preamble-Dateien definiert:
+- `00_preamble/german.tex` - Deutsche Labels
+- `00_preamble/english.tex` - Englische Labels
+
+Alle Kapitel-Überschriften verwenden die entsprechenden Labels (z.B. `\introductionLabel`, `\relatedWorkLabel`), sodass sie automatisch in der gewählten Sprache angezeigt werden.
+

@@ -19,6 +19,7 @@
 \newcommand{\contentsLabel}{Inhaltsverzeichnis}
 \newcommand{\listoffiguresLabel}{Abbildungsverzeichnis}
 \newcommand{\listoftablesLabel}{Tabellenverzeichnis}
+\newcommand{\acronymLabel}{Akronyme}
 
 % Kapitel-Labels
 \newcommand{\introductionLabel}{Einleitung und Problemhintergrund}
@@ -35,6 +36,12 @@
 \newcommand{\pageLabel}{Seite}
 \newcommand{\chapterLabel}{Kapitel}
 \newcommand{\sectionLabel}{Abschnitt}
+
+% LaTeX-Standard-Befehle überschreiben
+\renewcommand{\tablename}{\tableLabel}
+\renewcommand{\figurename}{\figureLabel}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 % =============================================================================
 % DEUTSCHE ZITIERSTILE

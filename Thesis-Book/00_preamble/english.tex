@@ -19,6 +19,7 @@
 \newcommand{\contentsLabel}{Table of Contents}
 \newcommand{\listoffiguresLabel}{List of Figures}
 \newcommand{\listoftablesLabel}{List of Tables}
+\newcommand{\acronymLabel}{Acronyms}
 
 % Chapter labels
 \newcommand{\introductionLabel}{Introduction and Problem Background}
@@ -35,6 +36,12 @@
 \newcommand{\pageLabel}{Page}
 \newcommand{\chapterLabel}{Chapter}
 \newcommand{\sectionLabel}{Section}
+
+% LaTeX-Standard-Befehle überschreiben
+\renewcommand{\tablename}{\tableLabel}
+\renewcommand{\figurename}{\figureLabel}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 % =============================================================================
 % ENGLISH CITATION STYLES
