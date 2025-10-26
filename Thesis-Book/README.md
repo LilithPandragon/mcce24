@@ -11,7 +11,7 @@ Alle Formatierungen entsprechen den Vorgaben der Word-Vorlage 12-10-2025.
 Die Hauptdatei ist `thesis-book.tex`. Diese enthält alle Formatierungseinstellungen und bindet die Kapitel ein.
 
 ### 2. Daten anpassen
-In der Datei `01_data/yourData.tex` müssen folgende Informationen angepasst werden:
+In den Sprachdateien `00_preamble/german.tex` oder `00_preamble/english.tex` müssen folgende Informationen angepasst werden:
 
 ```latex
 \newcommand{\typeOfWork}{Masterarbeit}
@@ -34,8 +34,9 @@ Die Kapitel befinden sich im Ordner `thesis_book_chapters/`:
 - `02_relatedWork.tex` - Stand des Wissens / Stand der Technik
 - `03_researchQuestion.tex` - Wissenschaftliche Fragestellung
 - `04_methodologicalApproach.tex` - Forschungsmethodik
-- `05_results.tex` - Ergebnisse
-- `06_conclusionAndFutureWork.tex` - Schlussfolgerungen und Ausblick
+- `05_documentStructure.tex` - Dokumentenstruktur
+- `06_results.tex` - Ergebnisse
+- `07_conclusionAndFutureWork.tex` - Schlussfolgerungen und Ausblick
 
 ### 4. Literaturverzeichnis
 Die Literaturverweise werden in `references.bib` verwaltet. Die Formatierung erfolgt automatisch.
@@ -85,16 +86,16 @@ latexmk -pdf -bibtex thesis-book.tex
 ### Spracheinstellung ändern
 
 Die Vorlage unterstützt sowohl deutsche als auch englische Ausgabe. Um zwischen den Sprachen zu 
-wechseln, ändern Sie in der Hauptdatei `thesis-book.tex` die Zeile 201:
+wechseln, ändern Sie in der Hauptdatei `thesis-book.tex` die Zeile 2:
 
 #### Für Deutsch:
 ```latex
-\input{00_preamble/german}
+\input{00_preamble/german.tex}
 ```
 
 #### Für Englisch:
 ```latex
-\input{00_preamble/english}
+\input{00_preamble/english.tex}
 ```
 
 ### Was wird automatisch übersetzt
@@ -119,5 +120,5 @@ Die Sprachlabels sind in den Preamble-Dateien definiert:
 - `00_preamble/german.tex` - Deutsche Labels
 - `00_preamble/english.tex` - Englische Labels
 
-Alle Kapitel-Überschriften verwenden die entsprechenden Labels (z.B. `\introductionLabel`, `\relatedWorkLabel`), sodass sie automatisch in der gewählten Sprache angezeigt werden.
+Alle Kapitel-Überschriften verwenden die entsprechenden Labels (z.B. `\introductionlabel`, `\relatedWorklabel`), sodass sie automatisch in der gewählten Sprache angezeigt werden.
 

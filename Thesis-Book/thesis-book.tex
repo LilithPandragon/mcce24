@@ -1,282 +1,73 @@
-% =============================================================================
-% Masterarbeit LaTeX-Vorlage - Angepasst an Word-Vorlage
-% =============================================================================
-% Diese Vorlage entspricht exakt den Formatierungsvorgaben der Word-Vorlage
-% für Masterarbeiten an der Hochschule Burgenland 2025-10-12
-% =============================================================================
-
-\documentclass[11pt,a4paper]{report}
-
-% =============================================================================
-% PACKAGES UND GRUNDEINSTELLUNGEN
-% =============================================================================
-
-% Zeichenkodierung
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-% Spracheinstellung
-\usepackage[english]{babel}
-
-% Schriftart: Times New Roman
-\usepackage{mathptmx}
-\usepackage[scaled=0.9]{helvet}
-\usepackage{courier}
-
-% Seitenlayout - Exakt nach Word-Vorlage
-\usepackage[
-    left=3.0cm,
-    right=3.0cm,
-    top=2.5cm,
-    bottom=3.0cm,
-    a4paper
-]{geometry}
-
-% Zeilenabstand: Genau 12pt (entspricht 1,09 in LaTeX)
-\usepackage{setspace}
-\setstretch{1.09}
-
-% Textausrichtung: Blocksatz
-\usepackage{ragged2e}
-\justifying
-
-% Überschriften-Formatierung
-\usepackage{titlesec}
-\usepackage{sectsty}
-
-% Tabellen und Abbildungen
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-
-% Aufzählungen
-\usepackage{enumitem}
-
-% Akronyme
-\usepackage[printonlyused, nohyperlinks]{acronym}
-
-% Mathematik
-\usepackage{amsmath}
-\usepackage{amssymb}
-
-% Literaturverwaltung
-\usepackage[
-    style=authoryear-icomp,
-    sorting=nty,
-    backend=biber,
-    language=english,
-    sortlocale=en-US,
-    natbib=true,
-    maxbibnames=1000,
-]{biblatex}
-\addbibresource{references.bib}
-
-% Hyperlinks
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    citecolor=black,
-    urlcolor=blue,
-    bookmarksnumbered=true,
-    pdfstartview={Fit},
-    pdfpagemode=UseOutlines,
-}
-
-% =============================================================================
-% FORMATIERUNGEN NACH WORD-VORLAGE 2025-10-12
-% =============================================================================
-
-% Hauptschrift: Times New Roman, 11pt
-\renewcommand{\normalsize}{\fontsize{11pt}{12pt}\selectfont}
-\renewcommand{\large}{\fontsize{12pt}{14pt}\selectfont}
-\renewcommand{\Large}{\fontsize{14pt}{16pt}\selectfont}
-\renewcommand{\LARGE}{\fontsize{16pt}{18pt}\selectfont}
-
-% Überschriften Ebene 1 (Hauptüberschriften)
-\titleformat{\chapter}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries\MakeUppercase}
-    {\thechapter}
-    {20pt}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries\MakeUppercase}
-
-\titlespacing{\chapter}{0pt}{36pt}{6pt}
-
-% Überschriften Ebene 2
-\titleformat{\section}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries}
-    {\thesection}
-    {1em}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries}
-
-\titlespacing{\section}{0pt}{12pt}{6pt}
-
-% Überschriften Ebene 3
-\titleformat{\subsection}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries}
-    {\thesubsection}
-    {1em}
-    {\fontsize{11pt}{12pt}\selectfont\bfseries}
-
-\titlespacing{\subsection}{0pt}{12pt}{6pt}
-
-% Absatzformatierung
-\setlength{\parindent}{0.4cm}  % Einzug für Folgeabsätze: 0,4 cm
-\setlength{\parskip}{0pt}      % Kein Abstand zwischen Absätzen
-
-% Erster Absatz nach Überschrift: Keine Einrückung
-\makeatletter
-\renewcommand{\@afterheading}{%
-    \@nobreaktrue
-    \everypar{%
-        \if@nobreak
-            \@nobreakfalse
-            \clubpenalty \@M
-            \setlength{\parindent}{0pt}%
-        \else
-            \setlength{\parindent}{0.4cm}%
-        \fi
-    }%
-}
-\makeatother
-
-% Aufzählungen
-\setlist[itemize]{
-    leftmargin=0.63cm,
-    label=\textbullet,
-    itemsep=0pt,
-    parsep=0pt,
-    topsep=0pt
-}
-
-% Tabellenformatierung
-\captionsetup[table]{
-    font=small,
-    labelfont=bf,
-    textfont=normalfont,
-    justification=justified,
-    singlelinecheck=false,
-    position=above,
-    skip=6pt
-}
-
-% Tabellenformatierung wird in Preamble-Datei definiert
-
-% Abbildungsformatierung
-\captionsetup[figure]{
-    font=small,
-    labelfont=bf,
-    textfont=normalfont,
-    justification=justified,
-    singlelinecheck=false,
-    position=below,
-    skip=6pt
-}
-
-% Abbildungsformatierung wird in Preamble-Datei definiert
-
-% Gleichungen
-\makeatletter
-\renewcommand{\@eqnnum}{%
-    \ifx\@empty\@eqnnum@prefix\else\@eqnnum@prefix\fi
-    \ifx\@empty\@eqnnum@suffix\else\@eqnnum@suffix\fi
-    \hfill\@eqnnum@number
-}
-\makeatother
-
-% Literaturverzeichnis
-\renewcommand{\bibfont}{\fontsize{10pt}{11pt}\selectfont}
-\setlength{\bibhang}{0.4cm}  % Hängender Einzug: 0,4 cm ab zweiter Zeile
-
-% =============================================================================
-% DOKUMENTDATEN
-% =============================================================================
-
-% Diese Werte müssen in yourData.tex angepasst werden
+\documentclass[11pt]{report}
+\input{00_preamble/german.tex}
+\input{00_preamble/thesis-book}
 \input{01_data/yourData}
 
-% Spracheinstellungen laden
-\input{00_preamble/german}
+\hypersetup{
+    pdftitle={\yourThesisTitle},
+    pdfsubject={\typeOfWork},
+    pdfauthor={\yourNameInclTitle},
+    breaklinks,               % permits line breaks for long links
+    bookmarksnumbered,        % ... and include section numbers
+    linktocpage,              % "make page number, not text, be link on TOC ..."
+    colorlinks,               % yes ...
+    linkcolor=black,          % normal internal links;
+    anchorcolor=black,   
+    citecolor=black,
+    urlcolor=blue,            % quite common
+    pdfstartview={Fit},       % "Fit" fits the page to the window
+    pdfpagemode=UseOutlines,  % open bookmarks in Acrobat
+    plainpages=false          % avoids duplicate page number problem
+}
 
-% =============================================================================
-% DOKUMENT BEGINN
-% =============================================================================
+\pagestyle{empty}
+\pagenumbering{gobble}
 
 \begin{document}
+\begin{flushleft}
+    \LARGE{\yourThesisTitle}
+\end{flushleft}
+\subsectionfont{\fontsize{13}{16}\normalfont}
+\titlespacing\subsection{0pt}{0ex}{0ex}
+\subsection*{\yourNameInclTitle}
+\vspace{-0.5em}
+\noindent{\textit{\universityCityCountry}}
+\vspace{1em}
 
-% Titelseite
-\thispagestyle{empty}
-\begin{center}
-    \vspace*{2cm}
-    
-    % Titel: Times New Roman, 16pt, Zeilenabstand 18pt
-    {\fontsize{16pt}{18pt}\selectfont\bfseries\yourThesisTitle}
-    
-    \vspace{3cm}
-    
-    % Autoren: Times New Roman, 12pt, Zeilenabstand 14pt
-    {\fontsize{12pt}{14pt}\selectfont\yourNameInclTitle}
-    
-    \vspace{1cm}
-    
-    % Institution: Times New Roman, 10pt, Zeilenabstand 11pt
-    {\fontsize{10pt}{11pt}\selectfont\universityCityCountry}
-    
-    \vspace{2cm}
-    
-    % Zusätzliche Informationen
-    {\fontsize{10pt}{11pt}\selectfont
-    \typeOfWork\\
-    \studyProgram\\
-    \thesisDate
-    }
-\end{center}
+% define header appearance
+\titleformat{\chapter}{\normalfont\large}{\thechapter}{20pt}{\normalfont\large\MakeUppercase}
+\chapterfont{\fontsize{13}{16}\normalfont\MakeUppercase}
+\titlespacing\chapter{0pt}{2ex}{2ex}
+\sectionfont{\fontsize{13}{16}\normalfont}
+\titlespacing\section{0pt}{0ex}{0ex}
+\subsectionfont{\fontsize{13}{16}\normalfont}
+\titlespacing\subsection{0pt}{0ex}{0ex}
+\subsubsectionfont{\fontsize{13}{16}\normalfont}
+\titlespacing\subsection{0pt}{0ex}{0ex}
+% numbering subsubsections
+\setcounter{secnumdepth}{5}
 
-\clearpage
+% do not start chapter on new page
+\makeatletter
+\patchcmd{\chapter}{\clearpage}{}{}{}
+\makeatother
 
-% Kurzfassung
-% Kurzfassung Formatierung: Text direkt nach "KURZFASSUNG:" in derselben Zeile
 \input{thesis_book_chapters/00_abstract_de}
-
-\clearpage
-
-% Inhaltsverzeichnis
-\tableofcontents
-\clearpage
-
-% =============================================================================
-% HAUPTKAPITEL
-% =============================================================================
-
-% Kapitel 1: Einleitung und Problemhintergrund
 \input{thesis_book_chapters/01_introduction}
-
-% Kapitel 2: Stand des Wissens / Stand der Technik
 \input{thesis_book_chapters/02_relatedWork}
-
-% Kapitel 3: Wissenschaftliche Fragestellung
 \input{thesis_book_chapters/03_researchQuestion}
-
-% Kapitel 4: Forschungsmethodik
 \input{thesis_book_chapters/04_methodologicalApproach}
+\input{thesis_book_chapters/05_documentStructure}
+\input{thesis_book_chapters/06_results}
+\input{thesis_book_chapters/07_conclusionAndFutureWork}
 
-% Kapitel 5: Ergebnisse
-\input{thesis_book_chapters/05_results}
+\titleformat{\chapter}{\normalfont\Large}{\thechapter}{20pt}{\normalfont\Large}
 
-% Kapitel 6: Schlussfolgerungen und Ausblick
-\input{thesis_book_chapters/06_conclusionAndFutureWork}
+\clearpage
+\input{acronyms}
 
-% =============================================================================
-% LITERATURVERZEICHNIS und Akronyme
-% =============================================================================
-
-\phantomsection
-\addcontentsline{toc}{chapter}{\literatureLabel}
+\clearpage
 \printbibliography[title=\literatureLabel]
 
-% Akronyme
-\input{acronyms.tex}
-
 \end{document}
+

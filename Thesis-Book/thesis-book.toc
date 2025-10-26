@@ -1,9 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung und Problemhintergrund}{4}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Stand des Wissens / Stand der Technik}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Wissenschaftliche Fragestellung}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Forschungsmethodik}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{8}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Schlussfolgerungen und Ausblick}{9}{chapter.6}%
-\contentsline {chapter}{Literaturverzeichnis}{9}{section*.10}%
-\contentsline {chapter}{Akronyme}{10}{section*.12}%
